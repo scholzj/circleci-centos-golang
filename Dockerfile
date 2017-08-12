@@ -11,5 +11,6 @@ RUN echo "%circleci        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 # Install golang
 RUN curl -s https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz | tar -xz -C /usr/local
 ENV PATH /usr/local/go/bin:/home/circleci/go/bin:$PATH
+ENV GOPATH /home/circleci/go:$GOPATH
 
 USER circleci
