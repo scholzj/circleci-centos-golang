@@ -5,7 +5,7 @@ MAINTAINER 	JAkub Scholz "www@scholzj.com"
 # Install needed software and users
 USER root
 RUN groupadd -r circleci && useradd -r -d /home/circleci -m -g circleci circleci
-RUN yum install -y git tar curl wget gcc sudo make && yum clean all
+RUN yum install -y git tar curl wget gcc sudo make docker && yum clean all
 RUN echo "%circleci        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 
 # Install golang
