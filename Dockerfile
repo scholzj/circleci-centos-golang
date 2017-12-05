@@ -9,7 +9,7 @@ RUN yum install -y git tar curl wget gcc sudo make docker && yum clean all
 RUN echo "%circleci        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 
 # Install golang
-RUN curl -s https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz | tar -xz -C /usr/local
+RUN curl -s https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz | tar -xz -C /usr/local
 ENV PATH /usr/local/go/bin:/home/circleci/go/bin:$PATH
 ENV GOPATH /home/circleci/go
 
