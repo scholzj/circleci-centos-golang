@@ -12,7 +12,7 @@ jobs:
       - deploy:
           name: Tag docker images
           command: |
-            docker tag scholzj/circleci-centos-golang:circle docker.io/scholzj/circleci-centos-golang:centos7-go1.10.0
+            docker tag scholzj/circleci-centos-golang:circle docker.io/scholzj/circleci-centos-golang:centos7-go1.13.0
             docker tag scholzj/circleci-centos-golang:circle docker.io/scholzj/circleci-centos-golang:latest
       - deploy:
           name: Login to Docker Hub
@@ -20,7 +20,7 @@ jobs:
       - deploy:
           name: Push docker images
           command: |
-            docker push scholzj/circleci-centos-golang:centos7-go1.10.0
+            docker push scholzj/circleci-centos-golang:centos7-go1.13.0
             docker push scholzj/circleci-centos-golang:latest
 workflows:
   version: 2
